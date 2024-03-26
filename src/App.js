@@ -47,9 +47,16 @@ function App() {
 
       </header>
       <section className="news-articles">
-        {articles.map((article) => {
+
+
+        {
+          articles.length!==0?
+        
+        
+        articles.map((article) => {
           return <News article={article} />;
-        })}
+        }):
+        <h3>No News Found For Search</h3>}
       </section>
     </div>
   );
