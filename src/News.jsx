@@ -2,9 +2,19 @@ function News(props) {
   console.log(props);
   return (
     <div className="news">
+
+
       <div className="news-img">
-        <img src={props.article.urlToImage} />
+        {
+          props.article.urlToImage!==null?
+          <img src={props.article.urlToImage} />:
+          <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/non_2x/icon-image-not-found-free-vector.jpg"/>
+        }
+        
       </div>
+
+
+
       <h1>{props.article.title}</h1>
       <p>
         {props.article.description?.substring(0, 100).concat("...")}{" "}
